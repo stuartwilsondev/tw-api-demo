@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+    ServerName longpoll.stuart2
+    DocumentRoot /home/sites/longpoll
+
+    SetEnv APPLICATION_ENV "stuart"
+
+    <Directory /home/sites/longpoll>
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
+

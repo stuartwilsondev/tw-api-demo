@@ -1,0 +1,8 @@
+[config]
+twitter_consumer_key        =
+twitter_consumer_secret     =
+twitter_request_token_url 	=
+authorize_url               =
+access_token_url            =
+access_token                =   
+access_token_secret         =

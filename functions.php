@@ -16,8 +16,22 @@ $twitter = new Twitter(
     $config['twitter_request_token_url'],
     $config['twitter_username']
 );
-$tweets = $twitter->twitterTimeline($config['twitter_username'],10);
 
-$woeids = $twitter->getAvailableWoeIds();
 
-$trends = $twitter->getTrendsByWoeId();
+switch($_GET['function']){
+
+    case 'getwoeids':
+
+        echo $twitter->getAvailableWoeIds();
+        break;
+
+    case 'gettrends':
+
+        echo $twitter->getTrendsByWoeId();
+        break;
+
+    case '':
+
+        echo $twitter->twitterTimeline($config['twitter_username'],10);
+        break;
+}

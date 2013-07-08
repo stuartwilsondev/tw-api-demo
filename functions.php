@@ -17,7 +17,7 @@ $twitter = new Twitter(
     $config['twitter_username']
 );
 
-
+header('Content-Type: application/json');
 switch($_GET['function']){
 
     case 'getwoeids':

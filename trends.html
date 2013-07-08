@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Twitter Wrapper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+    <!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+    <!--script src="js/less-1.3.3.min.js"></script-->
+    <!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+           getWoeids();
+        });
+    </script>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+        </div>
+        <div class="span8">
+            <div class="page-header">
+                <h1>
+                    Simple Twitter Wrapper [Trends]<small> &nbsp;&nbsp;- StrategyEye</small>
+                </h1>
+            </div>
+            <div class="clearfix"></div>
+            <div class="well well-large">
+                This page demonstrates loading of the top 10 trends on Twitter.<br/>
+                The locations are <a href="http://developer.yahoo.com/geo/geoplanet/guide/concepts.html" target="_BLANK">Yahoo!</a> <strong>W</strong>here <strong>O</strong>n <strong>E</strong>arth <strong>I</strong>ds
+                which are used by Twitter for location based content.<br/>
+                This uses the standard set of locations provided by Twitter (on page load) but Latitude/Longitude can also be used to get the closest
+                Available location<br/><br/><br/>
+                Please select a location using the dropdown below. Data is <strong>LIVE</strong>.
+            </div>
+            <div class="clearfix"></div>
+            <div id="woeid_options">
+                <div id="loading-locations">
+                    <img id="select-loading" src="img/ajax-loader.gif" /> Loading Locations
+                </div>
+                <select id="woeids" style="display:none;">
+                    <option value=""> - Select Location - </option>
+                </select>
+            </div>
+            <div class="clearfix"></div>
+
+            <div>
+                <h4>Top 10 Trends <span id="location-name-header"></span> <img style="display:none;" id="trends-loading" src="img/ajax-loader.gif" /></h4>
+            </div>
+            <span class="badge pull-right">Count: <span id="counter">0</span></span>
+            <table id="results" style="display:none;" class="table">
+                <thead>
+                <tr>
+                    <th>
+                        &#35;Hashtag
+                    </th>
+                    <!-- <th>
+                         Query
+                     </th>-->
+                    <th>
+                        Url
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

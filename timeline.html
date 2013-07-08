@@ -41,23 +41,44 @@
         <div class="span8">
             <div class="page-header">
                 <h1>
-                    Simple Twitter Wrapper <small> &nbsp;&nbsp;- StrategyEye</small>
+                    Simple Twitter Wrapper [Timeline]<small> &nbsp;&nbsp;- StrategyEye</small>
                 </h1>
             </div>
             <div class="clearfix"></div>
+            <div class="well well-large">
+                This page demonstrates loading a users Timeline from Twitter.<br/><br/>
 
-            <a href="/trends.html">
-                <button id="trends-button" class="btn btn-info btn-block" type="button">Top 10 Trends</button>
-            </a><br/>
-            <a href="/timeline.html">
-                <button id="timeline-button" class="btn btn-warning btn-block" type="button">Timeline</button>
-            </a><br/>
-            <a href="">
-                <button id="woeids-button" class="btn btn-success btn-block" type="button">Where On Earth?</button>
-            </a>
-
-
+                Please choose the options below. Data is <strong>LIVE</strong>.
+            </div>
             <div class="clearfix"></div>
+
+            <div class="input-prepend">
+                <span class="add-on">@</span>
+                <input style="width:300px;" class="span2" id="prependedInput" type="text" placeholder="Twitter Username">
+                <button id="go-timeline-button" class="btn btn-info " type="button">Get Timeline</button>
+            </div>
+            <div class="clearfix"></div><br/><br/>
+
+
+            <table id="twitter-feed" class="table">
+                <thead>
+                <tr>
+                    <th>
+                        User
+                    </th>
+                    <!-- <th>
+                         Query
+                     </th>-->
+                    <th>
+                       Tweet
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
         </div>
         <div class="span2">
         </div>

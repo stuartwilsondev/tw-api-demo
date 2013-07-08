@@ -5,6 +5,9 @@
 
 require_once('Twitter.php');
 
+if(!file_exists('config.ini')){
+    die('No Config');
+}
 $config = parse_ini_file('config.ini');
 $twitter = new Twitter(
     $config['access_token'],
@@ -27,11 +30,11 @@ switch($_GET['function']){
 
     case 'gettrends':
 
-        echo $twitter->getTrendsByWoeId();
+        echo $twitter->getTrendsByWoeId($_GET['woeid']);
         break;
 
-    case '':
+    case 'gettimeline':
 
-        echo $twitter->twitterTimeline($config['twitter_username'],10);
+        echo $twitter->twitterTimeline($_GET['username'],$_GET['nooftweets']);
         break;
 }
